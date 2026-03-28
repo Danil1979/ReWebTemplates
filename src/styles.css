@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  
+  --color-botanical-green: #2D4F44;
+  --color-petal-cream: #FDFBF7;
+  --color-dawn-pink: #E9D5CA;
+  --color-gold-accent: #C5A059;
+  --color-slate-ink: #334155;
+}
+
+/* Custom CSS Variables for local styles */
+:root {
+  --header-height: 80px;
+  --botanical-green: #2D4F44;
+  --petal-cream: #FDFBF7;
+  --dawn-pink: #E9D5CA;
+  --gold-accent: #C5A059;
+  --slate-ink: #334155;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--petal-cream);
+  color: var(--slate-ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--botanical-green);
+  letter-spacing: -0.02em;
+}
+
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Transitions and Reveals */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Buttons */
+.btn-primary {
+  background-color: var(--botanical-green);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--botanical-green);
+  border-color: var(--botanical-green);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-accent);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--gold-accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Navigation Links */
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--botanical-green);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.is-active {
+  opacity: 1;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.is-active::after {
+  width: 100%;
+}
