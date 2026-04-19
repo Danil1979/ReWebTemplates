@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rwt",
+  "compatibility_date": "2026-04-19",
+  "observability": {
+    "enabled": true
+  },
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
