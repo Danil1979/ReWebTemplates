@@ -14,7 +14,7 @@ export const ContactWidgets: React.FC<ContactWidgetsProps> = ({ contact }) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] group"
+        className="w-16 h-16 bg-[#25D366]/60 backdrop-blur-md text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#25D366]/90 hover:scale-110 transition-all duration-500 hover:shadow-[0_0_20px_rgba(37,211,102,0.3)] group"
       >
         <svg 
           viewBox="0 0 24 24" 

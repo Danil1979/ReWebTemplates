@@ -1,6 +1,7 @@
-import React from 'react';
-import { MapPin, Navigation } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Navigation, Maximize } from 'lucide-react';
 import MapImg from '../assets/MapLocation.jpg';
+import { ImageModal } from './ImageModal';
 
 interface LocationSectionProps {
   location: {
@@ -11,11 +12,16 @@ interface LocationSectionProps {
 }
 
 export const LocationSection: React.FC<LocationSectionProps> = ({ location }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="location" className="py-32 bg-transparent relative">
       <div className="page-wrap px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <div className="order-2 lg:order-1 relative group reveal-up">
+          <div 
+            className="order-2 lg:order-1 relative group reveal-up cursor-pointer"
+            onClick={() => setIsModalOpen(true)}
+          >
             <div className="absolute inset-0 bg-[var(--forest-deep)]/10 rounded-[3rem] -rotate-3 transform scale-95 group-hover:rotate-0 transition-transform duration-700"></div>
             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-3xl border-[12px] border-white/80 backdrop-blur-xl">
               <img 
@@ -25,6 +31,13 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ location }) =>
               />
               {/* Glass Reflection Overlay */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-white/10 pointer-events-none" />
+              
+              {/* Zoom Indicator */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-2xl">
+                  <Maximize size={32} />
+                </div>
+              </div>
             </div>
           </div>
           
@@ -58,6 +71,13 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ location }) =>
           </div>
         </div>
       </div>
+
+      <ImageModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageUrl={MapImg}
+        caption="Enlace Suites Strategic Map"
+      />
     </section>
   );
 };

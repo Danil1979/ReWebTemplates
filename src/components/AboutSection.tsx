@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BuildingImg from '../assets/Building.jpg';
 import { Info, Calendar, Home, Layers, Clock, Tag, Maximize } from 'lucide-react';
+import { ImageModal } from './ImageModal';
 
 interface AboutSectionProps {
   about: string;
@@ -8,6 +9,7 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ about, name }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const specs = [
     { label: 'Unit Type', value: 'Serviced Apartment', icon: Home },
     { label: 'Built-up', value: '474 - 1733 sqft', icon: Maximize },
@@ -45,7 +47,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ about, name }) => {
             </div>
           </div>
 
-          <div className="relative group reveal-up lg:mt-12">
+          <div 
+            className="relative group reveal-up lg:mt-12 cursor-pointer"
+            onClick={() => setIsModalOpen(true)}
+          >
             <div className="absolute -inset-4 border border-[var(--bronze-warm)]/20 rounded-2xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-700"></div>
             <div className="relative h-[650px] overflow-hidden rounded-2xl shadow-3xl">
               <img 
@@ -54,10 +59,24 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ about, name }) => {
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-deep)]/40 to-transparent" />
+              
+              {/* Zoom Indicator */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
+                  <Maximize size={24} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <ImageModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageUrl={BuildingImg}
+        caption="Enlace Suites Architecture"
+      />
     </section>
   );
 };
