@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRoute, Outlet } from '@tanstack/react-router'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'NARA Showcase | Premium Real Estate',
+        title: 'ENLACE Showcase | Premium Real Estate',
       },
     ],
     links: [
@@ -23,23 +23,18 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: appCss,
       },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com',
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
-      },
     ],
   }),
-  shellComponent: RootDocument,
+  component: RootComponent,
 })
+
+function RootComponent() {
+  return (
+    <RootDocument>
+      <Outlet />
+    </RootDocument>
+  )
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (

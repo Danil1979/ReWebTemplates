@@ -1,17 +1,24 @@
 import type { PropertyData } from '../types/property';
+import LoungeImg from '../assets/Lounge.jpg';
+import PoolImg from '../assets/Pool.jpg';
+import GardenImg from '../assets/Garden.jpg';
+import FloorPlanAImg from '../assets/FloorPlanTypeA.jpg';
+import FloorPlanBImg from '../assets/FloorPlanTypeB.jpg';
+import FloorPlanCImg from '../assets/FloorPlanTypeC.jpg';
 
 export const mockProperty: PropertyData = {
-  id: 'luxury-residence-01',
-  name: 'Ocean View Premium Residences',
-  tagline: 'Experience Coastal Luxury at Its Finest',
-  description: 'A masterpiece of architecture and design, located in the heart of the coastal district.',
-  about: 'Welcome to Ocean View Residences, where every corner is designed with elegance and comfort in mind. Our project offers a unique blend of modern architecture and natural beauty, ensuring a serene living experience for you and your family.',
+  id: 'enlace-suites-01',
+  name: 'Enlace Suites',
+  tagline: 'The Beating Heart of Pantai Sentral Park',
+  description: 'An urban sanctuary seamlessly integrated with nature, offering sophisticated living in the heart of KL\'s Urban Forest City.',
+  about: 'Enlace Suites represents the latest residential evolution within the 58-acre Pantai Sentral Park. Designed with biophilic principles, it offers a harmonious connection to the 200-acre Bukit Kerinchi Forest Reserve while providing modern urban convenience through its dedicated pedestrian skybridge to the future MRT3 station.',
   location: {
-    address: '123 Coastal Drive, Marina District, PV 54321',
+    address: 'Pantai Sentral Park, Off Jalan Pantai Dalam, 59200 Kuala Lumpur',
     highlights: [
-      '3 Minutes from Marina Beach',
-      'Direct access to Metro Station',
-      'Proximity to International Schools'
+      'Direct Skybridge to MRT3 Pantai Dalam',
+      'Adjacent to 200-acre Forest Reserve',
+      'Direct Access to NPE Interchange',
+      'Minutes to Bangsar South & Mid Valley'
     ]
   },
   facilities: [
@@ -37,28 +44,28 @@ export const mockProperty: PropertyData = {
     }
   ],
   gallery: [
-    { type: 'image', url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', caption: 'Exterior View' },
-    { type: 'image', url: 'https://images.unsplash.com/photo-1600585154340-be6191dae10c?auto=format&fit=crop&w=1200&q=80', caption: 'Living Room' },
-    { type: 'video', url: 'https://www.w3schools.com/html/mov_bbb.mp4', thumbnailUrl: 'https://images.unsplash.com/photo-1600607687940-4e524cb350b1?auto=format&fit=crop&w=600&q=80', caption: 'Walkthrough Video' }
+    { type: 'image', url: LoungeImg, caption: 'Lounge' },
+    { type: 'image', url: PoolImg, caption: 'Pool' },
+    { type: 'image', url: GardenImg, caption: 'Garden' }
   ],
   pricing: [
     { 
       unitType: '2 BHK - Type A', 
       sizeSqFt: 1250, 
       startingPrice: '$450,000',
-      layoutImage: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800&q=80' 
+      layoutImage: FloorPlanAImg 
     },
     { 
       unitType: '3 BHK - Type B', 
       sizeSqFt: 1850, 
       startingPrice: '$680,000',
-      layoutImage: 'https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&w=800&q=80'
+      layoutImage: FloorPlanBImg
     },
     { 
       unitType: 'Penthouse', 
       sizeSqFt: 3200, 
       startingPrice: '$1,200,000',
-      layoutImage: 'https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=800&q=80'
+      layoutImage: FloorPlanCImg
     }
   ],
   contact: {
