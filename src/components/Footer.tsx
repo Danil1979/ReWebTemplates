@@ -73,7 +73,7 @@ export default function Footer({ contact }: FooterProps) {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[9px] text-white/30 uppercase tracking-[0.5em] font-bold font-montserrat">
-            © 2026 ENLACE SHOWCASE • Pantai Sentral Park
+            
           </p>
           <button 
             onClick={scrollToTop}
