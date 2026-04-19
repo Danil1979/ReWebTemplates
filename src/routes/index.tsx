@@ -4,7 +4,6 @@ import Gallery from '../components/Gallery'
 import FacilitySection from '../components/FacilitySection'
 import LocationSection from '../components/LocationSection'
 import PricingTable from '../components/PricingTable'
-import ContactSection from '../components/ContactSection'
 import ContactWidgets from '../components/ContactWidgets'
 import { mockProperty } from '../utils/mockData'
 import LobbyImage from '../assets/Lobby.jpg'
@@ -53,14 +52,6 @@ function App() {
           <p className="mb-16 max-w-3xl mx-auto text-xl md:text-2xl font-light leading-relaxed text-[var(--slate-ink)] opacity-80">
             {property.description}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <a href="#about" className="btn-primary min-w-[240px] no-underline">
-              The Experience
-            </a>
-            <a href="#gallery" className="btn-outline min-w-[240px] no-underline">
-              Visual Tour
-            </a>
-          </div>
         </div>
       </section>
 
@@ -77,7 +68,6 @@ function App() {
       <div className="section-link-bronze">
         <PricingTable pricing={property.pricing} />
       </div>
-      <ContactSection contact={property.contact} />
       <ContactWidgets contact={property.contact} />
     </main>
   )

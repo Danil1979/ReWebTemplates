@@ -28,16 +28,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ about, name }) => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {specs.map((spec, index) => (
-                <div key={index} className="p-8 bg-white/60 backdrop-blur-md border border-white rounded-[2rem] hover:border-[var(--bronze-warm)]/40 transition-all duration-500 group shadow-sm">
+                <div key={index} className="p-8 bg-white/60 backdrop-blur-md border border-white text-center rounded-[2rem] hover:border-[var(--bronze-warm)]/40 transition-all duration-500 group shadow-sm">
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-12 h-12 rounded-full bg-[var(--forest-deep)]/5 flex items-center justify-center text-[var(--bronze-warm)] group-hover:bg-[var(--bronze-warm)] group-hover:text-white transition-all duration-500">
                       <spec.icon size={20} />
                     </div>
-                    <span className="text-[15px] uppercase font-bold tracking-[0.2em] text-[var(--forest-deep)]">
+                    <span className="text-[15px] text-left uppercase font-bold tracking-[0.2em] text-[var(--forest-deep)]">
                       {spec.label}
                     </span>
                   </div>
-                  <p className="text-2xl font-serif font-bold text-[var(--forest-deep)] leading-tight">
+                  <p className="text-[15px] uppercase font-bold text-[var(--forest-deep)] leading-tight">
                     {spec.value}
                   </p>
                 </div>

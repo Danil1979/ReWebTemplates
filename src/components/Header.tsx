@@ -17,11 +17,11 @@ export default function Header() {
         {/* Navigation */}
         <div className="hidden md:flex items-center gap-12">
           <Link to="/" className="nav-link" activeProps={{ className: 'nav-link is-active' }}>
-            Vision
+            Home
           </Link>
-          <a href="#about" className="nav-link">Sanctuary</a>
+          <a href="#about" className="nav-link">Specification</a>
           <a href="#gallery" className="nav-link">Gallery</a>
-          <a href="#pricing" className="nav-link">Selection</a>
+          <a href="#pricing" className="nav-link">Layout</a>
           <a href="#contact" className="btn-primary no-underline">Register Interest</a>
         </div>
 

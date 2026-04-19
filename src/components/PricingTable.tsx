@@ -14,7 +14,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ pricing }) => {
       <div className="page-wrap px-6 md:px-12">
         <div className="text-center mb-24 reveal-up">
           <span className="text-[10px] uppercase font-bold tracking-[0.6em] text-[var(--bronze-warm)] mb-6 block">The Selection</span>
-          <h2 className="text-5xl md:text-7xl font-serif font-bold text-[var(--forest-deep)] mb-8">Spatial <span className="italic font-light text-[var(--bronze-warm)]">Configurations</span></h2>
+          <h2 className="text-5xl md:text-7xl font-serif font-bold text-[var(--forest-deep)] mb-8">Spatial <span className="italic font-light text-[var(--bronze-warm)]">Layout</span></h2>
           <p className="text-[var(--forest-mist)] opacity-60 max-w-2xl mx-auto font-light text-lg text-center">
             Meticulously crafted layouts designed to maximize biophilic interaction and urban functionality.
           </p>
@@ -30,8 +30,8 @@ export const PricingTable: React.FC<PricingTableProps> = ({ pricing }) => {
                 className={`w-full text-left p-8 rounded-[2rem] border-2 transition-all duration-500 group relative overflow-hidden ${
                   activePlan === index 
                     ? 'border-[var(--bronze-warm)] bg-[var(--forest-deep)] shadow-3xl translate-x-4' 
-                    : 'border-white/40 bg-white/20 hover:border-[var(--bronze-warm)]/30 hover:bg-white/40'
-                }`}
+                    : 'border-[var(--forest-deep)]/5 bg-white/60 hover:border-[var(--bronze-warm)]/30 hover:bg-white/90 shadow-sm hover:shadow-md'
+                } font-montserrat`}
               >
                 {/* Active Indicator Line */}
                 {activePlan === index && (
@@ -47,7 +47,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ pricing }) => {
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-6 text-[10px] uppercase font-bold tracking-[0.2em] relative z-10">
+                <div className="flex items-center gap-6 text-[14px] uppercase font-bold tracking-[0.2em] relative z-10">
                   <span className={`transition-colors duration-500 ${activePlan === index ? '!text-[var(--bronze-glow)]' : 'text-[var(--forest-deep)]/40'}`}>
                     {plan.sizeSqFt} SQ. FT.
                   </span>

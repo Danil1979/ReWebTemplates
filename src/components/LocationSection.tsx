@@ -38,15 +38,13 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ location }) =>
                   <MapPin className="text-[var(--bronze-warm)] group-hover:text-white" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xs uppercase font-bold tracking-widest text-[var(--forest-deep)]/40 mb-2">Address</h3>
-                  <p className="text-xl text-[var(--forest-deep)] font-medium leading-relaxed">
+                  <p className="text-l font-bold uppercase text-[var(--forest-deep)] font-medium leading-relaxed">
                     {location.address}
                   </p>
                 </div>
               </div>
               
               <div className="space-y-6">
-                <h3 className="text-xs uppercase font-bold tracking-widest text-[var(--forest-deep)]/40">The Connectivity Link</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {location.highlights.map((highlight, index) => (
                     <div key={index} className="flex items-center gap-4 p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm backdrop-blur-md hover:border-[var(--bronze-warm)]/30 transition-colors">

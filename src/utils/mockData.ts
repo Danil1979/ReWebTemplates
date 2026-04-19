@@ -50,28 +50,28 @@ export const mockProperty: PropertyData = {
   ],
   pricing: [
     { 
-      unitType: '2 BHK - Type A', 
+      unitType: 'Type A', 
       sizeSqFt: 1250, 
       startingPrice: '$450,000',
       layoutImage: FloorPlanAImg 
     },
     { 
-      unitType: '3 BHK - Type B', 
+      unitType: 'Type B', 
       sizeSqFt: 1850, 
       startingPrice: '$680,000',
       layoutImage: FloorPlanBImg
     },
     { 
-      unitType: 'Penthouse', 
+      unitType: 'Type C', 
       sizeSqFt: 3200, 
       startingPrice: '$1,200,000',
       layoutImage: FloorPlanCImg
     }
   ],
   contact: {
-    whatsapp: '+1234567890',
-    instagram: 'oceanview_premium',
-    email: 'sales@oceanview.premium',
-    phone: '+1 800 OCEAN VIEW'
+    whatsapp: '+60122016289',
+    instagram: 'enlace_preview',
+    email: 'sales@enlace.preview',
+    phone: '+60122016289'
   }
 };

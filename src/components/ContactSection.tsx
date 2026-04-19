@@ -12,7 +12,6 @@ interface ContactSectionProps {
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
   const contactItems = [
-    { icon: <Phone size={24} />, label: 'Phone', value: contact.phone, link: `tel:${contact.phone}` },
     { icon: <Mail size={24} />, label: 'Email', value: contact.email, link: `mailto:${contact.email}` },
     { icon: <MessageCircle size={24} />, label: 'WhatsApp', value: contact.whatsapp, link: `https://wa.me/${contact.whatsapp.replace('+', '')}` },
     { icon: <Instagram size={24} />, label: 'Instagram', value: `@${contact.instagram}`, link: `https://instagram.com/${contact.instagram}` },
